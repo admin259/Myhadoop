@@ -8,11 +8,12 @@ sudo addgroup hadoop
 sudo adduser hduser --ingroup hadoop 
 sudo adduser hduser sudo
 sudo su hduser
+cd
 
 #Install SSH
 sudo apt-get install openssh-server -y
 
-#Configure SSH
+#Configure passwordless SSH for localhost
 ssh-keygen
 cd .ssh
 cat id_rsa.pub >> authorized_keys
